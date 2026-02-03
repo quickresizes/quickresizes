@@ -72,3 +72,19 @@ body.light-mode .nav a {
 body.light-mode #themeToggle {
   color: #111;
 }
+#langToggle {
+  margin-left: 10px;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+body.light-mode #langToggle {
+  border-color: #111;
+  color: #111;
+}
+
