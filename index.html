@@ -23,9 +23,12 @@
   <p>Resize, compress, convert images and more — fast & free.</p>
 </main>
    <script>
-document.getElementById("themeToggle").onclick = function () {
-  document.body.classList.toggle("light-mode");
-};
+const toggleBtn = document.getElementById("themeToggle");
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  });
+}
 </script>
 </body>
 </html>
