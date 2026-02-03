@@ -16,11 +16,19 @@
     <a href="#contact">Contact</a>
   </nav>
     <button id="themeToggle">🌙</button>
+    <button id="langToggle">EN</button>
 </header>
 
 <main>
-  <h1>Free Online Image & Media Tools</h1>
-  <p>Resize, compress, convert images and more — fast & free.</p>
+  <h1 data-en="Free Online Image & Media Tools"
+    data-hi="मुफ़्त ऑनलाइन इमेज और मीडिया टूल्स">
+  Free Online Image & Media Tools
+</h1>
+
+<p data-en="Resize, compress, convert images and more — fast & free."
+   data-hi="इमेज का साइज बदलें, कंप्रेस करें, कन्वर्ट करें — तेज़ और मुफ़्त।">
+  Resize, compress, convert images and more — fast & free.
+</p>
 </main>
    <script>
 const toggleBtn = document.getElementById("themeToggle");
@@ -29,6 +37,19 @@ if (toggleBtn) {
     document.body.classList.toggle("light-mode");
   });
 }
+</script>
+  
+  <script>
+let currentLang = "en";
+
+document.getElementById("langToggle").onclick = function () {
+  currentLang = currentLang === "en" ? "hi" : "en";
+  this.textContent = currentLang === "en" ? "EN" : "HI";
+
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.textContent = el.getAttribute("data-" + currentLang);
+  });
+};
 </script>
 </body>
 </html>
