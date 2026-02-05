@@ -33,36 +33,36 @@
   <h2>Our Tools</h2>
 
   <div class="tool-grid">
-    <div class="tool-card">Image Resizer</div>
-    <div class="tool-card">Image Compressor</div>
-    <div class="tool-card">Format Converter</div>
-    <div class="tool-card">YouTube Thumbnail Downloader</div>
+
+  <div class="tool-card" id="resizerCard">
+    <h3>Image Resizer</h3>
+
+    <!-- yahin paste karna hai -->
+    <div class="tool-content">
+      <input type="file" id="imageInput" accept="image/*"><br><br>
+
+      <label>Width:</label>
+      <input type="number" id="widthInput">
+
+      <label>Height:</label>
+      <input type="number" id="heightInput"><br><br>
+
+      <button id="resizeBtn">Resize Image</button><br><br>
+
+      <canvas id="canvas" style="display:none;"></canvas>
+
+      <a id="downloadLink" download="resized-image.png" style="display:none;">
+        Download Image
+      </a>
+    </div>
   </div>
-</section>
-  <section class="tool-section" id="image-resizer">
-  <h2>Image Resizer</h2>
 
-  <input type="file" id="imageInput" accept="image/*">
+  <div class="tool-card">Image Compressor</div>
+  <div class="tool-card">Format Converter</div>
+  <div class="tool-card">YouTube Thumbnail Downloader</div>
 
-  <br><br>
+</div>
 
-  <label>Width:</label>
-  <input type="number" id="widthInput">
-
-  <label>Height:</label>
-  <input type="number" id="heightInput">
-
-  <br><br>
-
-  <button id="resizeBtn">Resize Image</button>
-
-  <br><br>
-
-  <canvas id="canvas" style="display:none;"></canvas>
-
-  <a id="downloadLink" download="resized-image.png" style="display:none;">
-    Download Image
-  </a>
 </section>
 </main>
    <script>
