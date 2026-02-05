@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuickResizes – Free Online Tools</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">QuickResizes</div>
+
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <input type="text" id="searchBox" placeholder="Search tools...">
+      <button id="themeToggle">🌙</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero">
+    <h1>Free Online Image & Media Tools</h1>
+    <p>Resize, compress, convert images and more — fast & free.</p>
+  </main>
+
+  <!-- TOOLS -->
+  <section class="tools" id="tools">
+    <h2>Our Tools</h2>
+
+    <div class="tool-grid" id="toolGrid">
+      <div class="tool-card">Image Resizer</div>
+      <div class="tool-card">Image Compressor</div>
+      <div class="tool-card">Format Converter</div>
+      <div class="tool-card">YouTube Thumbnail Downloader</div>
+
+      <!-- placeholder (baad mein 24 honge) -->
+      <div class="tool-card">PDF Compressor</div>
+      <div class="tool-card">Video Converter</div>
+      <div class="tool-card">Audio Converter</div>
+      <div class="tool-card">Image Cropper</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <p>© 2026 QuickResizes. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Dark Mode
+    document.getElementById("themeToggle").onclick = function () {
+      document.body.classList.toggle("light-mode");
+    };
+
+    // Search Filter
+    document.getElementById("searchBox").addEventListener("keyup", function () {
+      let value = this.value.toLowerCase();
+      document.querySelectorAll(".tool-card").forEach(card => {
+        card.style.display = card.textContent.toLowerCase().includes(value)
+          ? "block"
+          : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
