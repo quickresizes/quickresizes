@@ -1,77 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>QuickResizes – Free Online Tools</title>
-
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">QuickResizes</div>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">QuickResizes</div>
 
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#tools">Tools</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <div class="header-actions">
-      <input type="text" id="searchBox" placeholder="Search tools...">
-      <button id="themeToggle">🌙</button>
-    </div>
-  </header>
+  <div class="header-actions">
+    <input type="text" id="searchBox" placeholder="Search tools...">
+    <button id="themeToggle">🌙</button>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <main class="hero">
-    <h1>Free Online Image & Media Tools</h1>
-    <p>Resize, compress, convert images and more — fast & free.</p>
-  </main>
+<!-- HERO -->
+<section class="hero">
+  <h1>Free Online Image & Media Tools</h1>
+  <p>Resize, compress, convert images and more — fast & free.</p>
+</section>
 
-  <!-- TOOLS -->
-  <section class="tools" id="tools">
-    <h2>Our Tools</h2>
+<!-- TOOLS -->
+<section class="tools" id="tools">
+  <h2>Our Tools</h2>
 
-    <div class="tool-grid" id="toolGrid">
-      <div class="tool-card">Image Resizer</div>
-      <div class="tool-card">Image Compressor</div>
-      <div class="tool-card">Format Converter</div>
-      <div class="tool-card">YouTube Thumbnail Downloader</div>
+  <div class="tool-grid" id="toolGrid">
 
-      <!-- placeholder (baad mein 24 honge) -->
-      <div class="tool-card">PDF Compressor</div>
-      <div class="tool-card">Video Converter</div>
-      <div class="tool-card">Audio Converter</div>
-      <div class="tool-card">Image Cropper</div>
-    </div>
-  </section>
+    <div class="tool-card">Image Resizer</div>
+    <div class="tool-card">Image Compressor</div>
+    <div class="tool-card">Format Converter</div>
+    <div class="tool-card">YouTube Thumbnail Downloader</div>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <p>© 2026 QuickResizes. All rights reserved.</p>
-  </footer>
+    <div class="tool-card">Image Cropper</div>
+    <div class="tool-card">Image Rotator</div>
+    <div class="tool-card">Image Flipper</div>
+    <div class="tool-card">PNG to JPG</div>
 
-  <!-- JS -->
-  <script>
-    // Dark Mode
-    document.getElementById("themeToggle").onclick = function () {
-      document.body.classList.toggle("light-mode");
-    };
+    <div class="tool-card">JPG to PNG</div>
+    <div class="tool-card">WEBP Converter</div>
+    <div class="tool-card">GIF Maker</div>
+    <div class="tool-card">PDF to Image</div>
 
-    // Search Filter
-    document.getElementById("searchBox").addEventListener("keyup", function () {
-      let value = this.value.toLowerCase();
-      document.querySelectorAll(".tool-card").forEach(card => {
-        card.style.display = card.textContent.toLowerCase().includes(value)
-          ? "block"
-          : "none";
-      });
-    });
-  </script>
+    <div class="tool-card">Image to PDF</div>
+    <div class="tool-card">Video Compressor</div>
+    <div class="tool-card">Video Converter</div>
+    <div class="tool-card">Audio Converter</div>
+
+    <div class="tool-card">Audio Compressor</div>
+    <div class="tool-card">Watermark Remover</div>
+    <div class="tool-card">Image Upscaler</div>
+    <div class="tool-card">Image Downscaler</div>
+
+    <div class="tool-card">QR Code Generator</div>
+    <div class="tool-card">QR Code Scanner</div>
+    <div class="tool-card">Color Picker</div>
+    <div class="tool-card">HEX to RGB</div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <p>© 2026 QuickResizes.com — All Rights Reserved</p>
+</footer>
+
+<!-- DARK MODE -->
+<script>
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});
+</script>
+
+<!-- SEARCH -->
+<script>
+const searchBox = document.getElementById("searchBox");
+const tools = document.querySelectorAll(".tool-card");
+
+searchBox.addEventListener("keyup", () => {
+  const value = searchBox.value.toLowerCase();
+  tools.forEach(tool => {
+    tool.style.display = tool.textContent.toLowerCase().includes(value)
+      ? "block"
+      : "none";
+  });
+});
+</script>
 
 </body>
 </html>
