@@ -1,13 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #111;
+  background-color: #111;
   color: #fff;
 }
 
 .header {
   padding: 15px 20px;
-  background: #000;
+  background-color: #000;
   font-size: 22px;
   font-weight: bold;
 }
@@ -20,26 +24,32 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* GRID FIX */
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+  gap: 16px;
 }
 
+/* BOX STYLE */
 .tool-card {
-  background: #1c1c1c;
+  background-color: #1c1c1c;
+  border-radius: 12px;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
+/* HOVER */
 .tool-card:hover {
-  background: #ff7a00;
+  background-color: #ff7a00;
   color: #000;
+  transform: translateY(-4px);
 }
 
+/* FUTURE TOOLS */
 .tool-card.future {
   opacity: 0.6;
   cursor: not-allowed;
