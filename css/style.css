@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  padding: 16px 24px;
+  background-color: #000;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* MAIN CONTAINER */
+.container {
+  padding: 24px;
+}
+
+/* TITLE */
+h1 {
+  margin-bottom: 24px;
+}
+
+/* TOOL GRID */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* TOOL CARD */
+.tool-card {
+  background-color: #1c1c1c;
+  border-radius: 14px;
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: all 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.tool-card:hover {
+  background-color: #ff7a00;
+  color: #000;
+  transform: translateY(-6px);
+}
+
+/* FUTURE / AI TOOLS */
+.tool-card.future {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
