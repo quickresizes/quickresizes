@@ -122,3 +122,12 @@ body.light .tool-card {
   font-size: 13px;
   color: #666;
 }
+body.light {
+  background: #f5f5f5;
+  color: #000;
+}
+
+body.light .tool-card {
+  background: #fff;
+  color: #000;
+}
