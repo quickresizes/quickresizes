@@ -87,3 +87,12 @@ body.light .tool-card {
   color: #000;
   border: 1px solid #ddd;
 }
+
+#search {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
