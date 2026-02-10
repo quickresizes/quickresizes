@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-/* BODY */
+/* BODY (DARK MODE DEFAULT) */
 body {
   font-family: Arial, sans-serif;
   background-color: #111;
@@ -17,11 +17,41 @@ body {
   background-color: #000;
   font-size: 22px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+}
+
+/* THEME TOGGLE */
+#themeToggle {
+  background: none;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /* MAIN CONTAINER */
 .container {
   padding: 24px;
+}
+
+/* SEARCH BOX */
+#search {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+  font-size: 16px;
 }
 
 /* TITLE */
@@ -48,54 +78,20 @@ h1 {
   transition: all 0.25s ease;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .tool-card:hover {
   background-color: #ff7a00;
   color: #000;
   transform: translateY(-6px);
 }
 
-/* FUTURE / AI TOOLS */
+/* FUTURE TOOLS */
 .tool-card.future {
   opacity: 0.55;
   cursor: not-allowed;
 }
-/* THEME TOGGLE BUTTON */
-#themeToggle {
-  float: right;
-  background: none;
-  border: 1px solid #444;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
-/* LIGHT MODE */
-body.light {
-  background-color: #f4f4f4;
-  color: #111;
-}
-
-body.light .header {
-  background: #fff;
-  color: #000;
-}
-
-body.light .tool-card {
-  background: #fff;
-  color: #000;
-  border: 1px solid #ddd;
-}
-
-#search {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: none;
-  font-size: 16px;
-}
+/* FOOTER */
 .footer {
   background: #000;
   padding: 20px;
@@ -122,12 +118,45 @@ body.light .tool-card {
   font-size: 13px;
   color: #666;
 }
+
+/* ===================== */
+/* 🌞 LIGHT MODE */
+/* ===================== */
 body.light {
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   color: #000;
+}
+
+body.light .header {
+  background: #fff;
+  color: #000;
+}
+
+body.light #themeToggle {
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+body.light #search {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
 }
 
 body.light .tool-card {
   background: #fff;
   color: #000;
+  border: 1px solid #ddd;
+}
+
+body.light .footer {
+  background: #fff;
+}
+
+body.light .footer-links a {
+  color: #444;
+}
+
+body.light .footer p {
+  color: #777;
 }
