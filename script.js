@@ -12,3 +12,14 @@ toggleBtn.addEventListener("click", () => {
   localStorage.setItem("theme", isLight ? "light" : "dark");
   toggleBtn.textContent = isLight ? "🌞" : "🌙";
 });
+const search = document.getElementById("search");
+const tools = document.querySelectorAll(".tool-card");
+
+search.addEventListener("input", () => {
+  const value = search.value.toLowerCase();
+  tools.forEach(tool => {
+    tool.style.display = tool.textContent.toLowerCase().includes(value)
+      ? "block"
+      : "none";
+  });
+});
